@@ -32,8 +32,12 @@ public class UI_Inventory : MonoBehaviour
 
             //locate the item in the grid
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
-            Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
-            image.sprite = item.GetSprite();
+            Transform Transform = itemSlotRectTransform.Find("image"); //name of component must be image
+            if (Transform != null)
+            {
+                Image image = Transform.GetComponent<Image>();
+                image.sprite = item.GetSprite();
+            }
             x++;
             if (x >4)
             {
