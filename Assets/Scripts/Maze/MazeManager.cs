@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExitMaze : MonoBehaviour
+public class MazeManager : MonoBehaviour
 {
     public GameObject maincamera;
     public GameObject mazeCamera;
@@ -12,6 +12,21 @@ public class ExitMaze : MonoBehaviour
     public GameObject player;
     public GameObject mazeCanvas;
 
+
+    private void Start()
+    {
+        mazeCamera.SetActive(false);
+        maincamera.SetActive(true);
+    }
+    public void StartMaze()
+    {
+        mazeCamera.SetActive(true);
+        maincamera.SetActive(false);
+        ui.SetActive(false);
+        maze.GetComponent<MazeController>().enabled = true;
+        player.SetActive(false);
+        mazeCanvas.SetActive(true);
+    } 
 
     public void Exit()
     {
