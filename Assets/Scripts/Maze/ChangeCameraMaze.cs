@@ -9,6 +9,8 @@ public class ChangeCameraMaze : MonoBehaviour
     public GameObject mazeCamera;
     public GameObject ui;
     public GameObject maze;
+    public GameObject player;
+    public GameObject mazeCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -16,18 +18,16 @@ public class ChangeCameraMaze : MonoBehaviour
         mazeCamera.SetActive(false);
         maincamera.SetActive(true);
     }
-
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider other)
     {
-        
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("collide");
-        mazeCamera.SetActive(true);
-        maincamera.SetActive(false);
-        ui.SetActive(false);
-        maze.GetComponent<MazeController>().enabled = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            mazeCamera.SetActive(true);
+            maincamera.SetActive(false);
+            ui.SetActive(false);
+            maze.GetComponent<MazeController>().enabled = true;
+            player.SetActive(false);
+            mazeCanvas.SetActive(true);
+        }
     }
 }
