@@ -12,6 +12,11 @@ namespace PhysicsPuzzle
         private float currentXRotation = 0f;
         private float currentZRotation = 0f;
 
+        private void Start()
+        {
+            currentXRotation = 0f;
+            currentZRotation = 0f;
+        }
         // Update is called once per frame
         void Update()
         {
