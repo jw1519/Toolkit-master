@@ -24,8 +24,7 @@ public class NPC : MonoBehaviour
             }
             else if (quest.isCompleted == true)
             {
-                QuestManager.instance.Quests.Remove(name);
-
+                QuestManager.instance.RemoveQuest(questMarker.questName);
                 Debug.Log(questMarker.questCompletionMessage);
                 endQuestDialogueTrigger.TriggerDialogue();
 

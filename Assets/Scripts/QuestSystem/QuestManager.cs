@@ -39,6 +39,10 @@ public class QuestManager : MonoBehaviour
         string itemtext = name.ToString();
         questMenu.text += itemtext + "\n";
     }
+    public void RemoveQuest(string name)
+    {
+        Quests.Remove(name);
+    }
 
     public void EnableQuestMarker(string name)
     {
@@ -55,7 +59,6 @@ public class QuestManager : MonoBehaviour
         if(quest != null)
         {
             quest.isCompleted = true;
-            
         }
     }
 }

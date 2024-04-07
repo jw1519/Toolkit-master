@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -31,7 +29,6 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence);
         }
         DisplayNextSentence();
-
     }
 
     public void DisplayNextSentence() 
@@ -44,10 +41,7 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
-        
-
     }
-
     IEnumerator TypeSentence (string sentence)
     {
         dialogueText.text = "";
@@ -61,8 +55,4 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", false);
     }
-
-    
-
-
 }
