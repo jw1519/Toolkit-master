@@ -119,6 +119,8 @@ GameObject:
   - component: {fileID: 6609926087297913964}
   - component: {fileID: 3821938843027424747}
   - component: {fileID: 2745253004389887966}
+  - component: {fileID: 4710929794703677292}
+  - component: {fileID: 3842141130511090346}
   m_Layer: 0
   m_Name: QuestStartCollider
   m_TagString: Untagged
@@ -175,3 +177,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questMarker: {fileID: 0}
+  questDialogueTrigger: {fileID: 4710929794703677292}
+  endQuestDialogueTrigger: {fileID: 3842141130511090346}
+--- !u!114 &4710929794703677292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892001336577881326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cce13cbe62ecc4890742ddebf3c785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []
+--- !u!114 &3842141130511090346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892001336577881326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cce13cbe62ecc4890742ddebf3c785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    sentences: []

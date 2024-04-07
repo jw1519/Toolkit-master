@@ -6,6 +6,8 @@ public class NPC : MonoBehaviour
 {
 
     public QuestMarker questMarker;
+    public DialogueTrigger questDialogueTrigger;
+    public DialogueTrigger endQuestDialogueTrigger;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,12 +20,15 @@ public class NPC : MonoBehaviour
                 QuestManager.instance.AddQuest(questMarker.questName, questMarker.questDescription);
                 questMarker.gameObject.SetActive(true);
                 Debug.Log(questMarker.questDescription);
+                questDialogueTrigger.TriggerDialogue();
             }
             else if (quest.isCompleted == true)
             {
                 QuestManager.instance.Quests.Remove(name);
 
                 Debug.Log(questMarker.questCompletionMessage);
+                endQuestDialogueTrigger.TriggerDialogue();
+
                 QuestManager.instance.questMenu.text = " Quests: \n";
                 foreach (string name in QuestManager.instance.Quests) // doesnt work with more than two questsa
                 {
