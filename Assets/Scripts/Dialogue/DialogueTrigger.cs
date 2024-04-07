@@ -8,7 +8,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-      //TriggerDialogue();
+      //TriggerDialogue(); now done in NPC
     }
     public void TriggerDialogue()
     {

@@ -42,7 +42,6 @@ namespace TileMap
                     GameObject prefabInstance = Instantiate(Blocklist[index]);
                     prefabInstance.transform.SetParent(TileParent);
                     prefabInstance.transform.position = pos;
-
                 }
             }
             if (navMeshSurface != null)

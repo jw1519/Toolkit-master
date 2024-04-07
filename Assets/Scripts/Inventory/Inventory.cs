@@ -16,7 +16,6 @@ public class Inventory : MonoBehaviour
         AddItem(new InventoryItem { itemType = InventoryItem.ItemType.Gold, amount = 1 });
         Debug.Log(itemList.Count);
     }
-
     public void AddItem(InventoryItem item)
     {
         itemList.Add(item);

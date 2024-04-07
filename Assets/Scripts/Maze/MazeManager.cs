@@ -27,7 +27,6 @@ public class MazeManager : MonoBehaviour
         player.SetActive(false);
         mazeCanvas.SetActive(true);
     } 
-
     public void Exit()
     {
         mazeCamera.SetActive(false);

@@ -13,7 +13,6 @@ public class UI_Inventory : MonoBehaviour
         this.inventory = inventory;
         RefreshInvetoryItems();
     }
-
     private void Awake()
     {
         itemSlotContainer = transform.Find("itemSlotContainer");
@@ -46,6 +45,4 @@ public class UI_Inventory : MonoBehaviour
             }
         }
     }
-
-
 }

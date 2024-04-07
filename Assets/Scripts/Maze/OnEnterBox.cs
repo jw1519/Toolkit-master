@@ -7,7 +7,6 @@ namespace PhysicsPuzzle
     public class OnEnterBox : MonoBehaviour
     {
         public GameObject boxTop;
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Ball"))
@@ -17,7 +16,6 @@ namespace PhysicsPuzzle
                 MazeChange.instance.ChangeMaze();
                 BallManager.instance.SpawnNewBall();
             }
-
         }
     }
 }

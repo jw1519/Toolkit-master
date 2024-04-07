@@ -11,7 +11,6 @@ namespace PhysicsPuzzle
         public float rotationLimit = 45f;
         private float currentXRotation = 0f;
         private float currentZRotation = 0f;
-
         private void Start()
         {
             currentXRotation = 0f;
